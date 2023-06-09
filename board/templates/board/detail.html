@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>글내용</h1><br>
+    등록일 : {{list_id.regdate}}<br>
+    조회수 : {{list_id.readcount}}<br>
+    작성자 : {{list_id.writer}}<br>
+    제목 : {{list_id.title}}<br>
+    내용 : {{list_id.content}}<br>
+    <hr>
+    <a href="{% url 'board:update' list_id.id %}" >수정</a><br>
+    <a href="{% url 'board:delete' list_id.id %}" >삭제</a><br>
+    <a href="{% url 'board:list' %}" >목록보기</a>
+</body>
+</html>
